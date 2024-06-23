@@ -1,4 +1,4 @@
-# 	Epic Cadence Configuration Project 
+# Epic Cadence Configuration Project
 
 ## Project Overview
 
@@ -11,7 +11,7 @@ The primary focus is on category lists, department settings, and scheduling func
 - **Department Configuration**: Set up departments with appropriate scheduling rules and policies.
 - **Scheduler Access and Restrictions**: Implement access controls to ensure compliance with scheduling protocols.
 
-## Project Structure
+### Project Structure
 
 1. **Structural Build Tasks**
    - Manage category lists
@@ -21,6 +21,7 @@ The primary focus is on category lists, department settings, and scheduling func
 2. **Schedule Build Tasks**
    - Set up schedules for providers and resources
    - Configure visit types and scheduling rules
+   - Create decision trees
 
 3. **Workqueue Tasks**
    - Build appointment request workqueues
@@ -34,56 +35,57 @@ The primary focus is on category lists, department settings, and scheduling func
 6. **Build Testing**
    - Test the configurations and schedules
 
-## Detailed Tasks
+### Detailed Tasks
 
-### 1. Structural Build Tasks
+1. Structural Build Tasks
 
 #### Category Lists
-- **Blocks Category List**: Created a new block named "Pediatric Consult" for the Pediatrics department.
-- **Centers Category List**: Created a new center named "Children's Health Center".
+- **Blocks Category List**: Create a new block named "Pediatric Consult" for the Pediatrics department.
+- **Centers Category List**: Create a new center named "Children's Health Center".
 
 #### Departments
-- Linked the Pediatrics, OB/GYN, and Radiology departments to "Children's Health Center".
-- Released the "Pediatric Consult" block for use by any provider in the Pediatrics department.
-- Configured the Pediatrics department to convert unused slots to unblocked slots 2 days prior to appointments.
-- Restricted scheduling in the Pediatrics department to "Same Day" blocks only on the same day.
-- Ensured at least 6 months of schedule availability for schedulers in the Radiology department, with automatic release date movement.
+- Link the Pediatrics, OB/GYN, and Radiology departments to "Children's Health Center".
+- Release the "Pediatric Consult" block for use by any provider in the Pediatrics department.
+- Configure the Pediatrics department to convert unused slots to unblocked slots 2 days prior to appointments.
+- Restrict scheduling in the Pediatrics department to "Same Day" blocks only on the same day.
+- Ensure at least 6 months of schedule availability for schedulers in the Radiology department, with automatic release date movement.
 
-### 2. Schedule Build Tasks
+2. Schedule Build Tasks
 
 #### Radiology Technologist and Room
-- Configured schedules from Monday to Friday (8:00-6:00 with a 12:00-12:30 lunch break) and Saturday mornings (8:00-12:00) for 3 years.
+- Configure schedules from Monday to Friday (8:00-6:00 with a 12:00-12:30 lunch break) and Saturday mornings (8:00-12:00) for 3 years.
 
 #### Providers
-- Configured schedules for:
+- Configure schedules for:
   - Mike (Pediatrics Provider 1)
   - Joe (Pediatrics Provider 2)
   - Jackie (OB/GYN Provider)
 
-### 3. Visit Type Tasks
-
 #### Visit Types
-- Created various visit types (Office Visit, Well Child, New OB Panel, Mammogram) and configured them according to department needs.
+- Create various visit types (Office Visit, Well Child, New OB Panel, Mammogram) and configure them according to department needs.
 
-### 4. Workqueue Tasks
+#### Decision Trees
+- Create decision trees to support scheduling logic and streamline the booking process.
+
+3. Workqueue Tasks
 
 #### Workqueue Build
-- Built an appointment request workqueue for cardiology orders.
+- Build an appointment request workqueue for cardiology orders.
 
-### 5. Patient Tasks
+4. Patient Tasks
 
 #### Patient Set Up
-- Created two test patients, Anne and Elizabeth, for validation purposes.
+- Create two test patients, Anne and Elizabeth, for validation purposes.
 
-### 6. Security Tasks
+5. Security Tasks
 
 #### Security Set Up
-- Configured the front desk security class to restrict scheduling and limit template edits.
+- Configure the front desk security class to restrict scheduling and limit template edits.
 
-### 7. Build Testing
+6. Build Testing
 
 #### Testing Your Build
-- Conducted tests to validate the scheduling and security configurations.
+- Conduct tests to validate the scheduling and security configurations.
 
 
 
